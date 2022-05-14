@@ -1,7 +1,7 @@
 # Python-Website
-There is an Python Website 💎
+**There is an Python Website** 💎
 # IMAGES
-**let's check out images from the website !**
+**Let's check out images from the website !**
 
 
 ![Screenshot_3](https://user-images.githubusercontent.com/86996274/168435769-4efbcba3-f19e-4e95-8fe8-1a59d80c8fea.png)
