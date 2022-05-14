@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>  DASHBOARD  </h3>
+<small>  Welcome, {{session["username"]}}   </small>
+<hr>
+
+<a href= "/addarticle" class = "btn btn-danger"> Add article </a>
+
+{% if articles %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Date</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+     {% for article in articles %}
+     <tr>
+        <th scope="row"> {{article.id}} </td>
+         <td><a href="/article/{{article.id}}">{{article.title}}</a> </td>
+        <td> {{article.author}} </td>
+         <td> {{article.date}} </td>
+         <td><a href="/edit/{{article.id}}" class = "btn btn-danger"> Update </a></td>
+         <td><a href="/delete/{{article.id}}" class = "btn btn-danger"> Clear </a></td>
+     </tr>
+     {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+<div class = "alert alert-danger"> There is no article </div>
+{% endif %}
+{% endblock body %}

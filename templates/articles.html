@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3> ARTICLES  </h3>
+<hr>
+
+{% if articles %}
+<form action="/search" method = "post">
+<div class="input-group rounded">
+  <input type="search" name ="keyword"class=" rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
+<hr>
+
+<ul class="list-group">
+  {% for article in articles %}
+  <li class = "list.group-item"><a href = "article/{{article.id}}">{{article.title}}</a></li>
+  {% endfor %}
+</ul>
+
+{% else %}
+<div class = "alert alert-danger"> There are no articles in this block yet  </div>
+{% endif %}
+
+{% endblock body %}
+

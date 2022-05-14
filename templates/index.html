@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<div class = "jumbotron text-center" >           
+    <h3>Welcome to my blog.</h3>
+    <p>  Its Cagla.I created this blog with Python.   <p>
+</div>
+<ul> 
+    {% for  article in articles  %}
+    <li> Article Id : {{article.id}} - Title {{article.title}} - Content: {{article.content}}
+     </li>      
+    
+    {% endfor %}
+</ul>
+{% endblock  %}
