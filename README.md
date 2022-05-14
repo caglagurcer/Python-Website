@@ -1,5 +1,5 @@
 # Python-Website
-**There is a website Python** 💎
+**There is a website using Python** 💎
 # IMAGES
 **Let's check out images from the website !**
 
